@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+
+
+{% block body %}
+<br><br>
+    
+<h4 style = "color: aliceblue;">
+    Upload the Business Card to Scan and Extract Entities
+</h4>
+
+<div class="row">
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <div class="input-group">
+            <input type="file" class="form-control" name="image_name" required>
+            <input type="submit" value="Upload Image" class="btn btn-dark" style="font-weight: bold;font-style :oblique;">
+        </div>
+    </form>
+    <br>
+    {% if fileupload %}
+
+        <div class="row">
+            <button class="btn btn-dark" id="sendData" style="font-weight:bold;">Wrap Document and Extract Text</button>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+
+<!-- Creating CANVAS -->
+{% if fileupload %}
+    <p>{{ message }}</p>
+
+    <div class="row">
+        <div class="col">
+            <canvas id="canvas" style="max-width: 100%; height: auto"></canvas>
+
+        </div>
+        <div class="col" id="loader" allign="center">
+
+        </div>
+
+    </div>
+
+    <script>
+        loadPoints({{ points | tojson }})
+    </script>
+
+
+
+
+
+{% endif %}
+
+{% endblock  %}

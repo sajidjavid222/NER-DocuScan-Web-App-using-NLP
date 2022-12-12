@@ -1,0 +1,104 @@
+{% extends 'index.html' %}
+
+{% block body %}
+<br>
+<body style="color: aliceblue;">
+
+    <h3>Welcome to our Document Scanner Web App !!!</h3>
+
+    <p>In this project we have developed a customized Named Entity Recognizer. 
+        The main idea of this project is to extract entities from the scanned documents like invoice, 
+        Business Card, Shipping Bill, Bill of Lading documents etc. However, 
+        for the sake of data privacy we have restricted our views to Business Card. 
+        But this framework can be used to all kinds of financial documents. 
+        Below given is the curriculum we have followed to develop this project.
+        To develop this project we have used two main technologies of data science which are:</p>
+        <ol>
+            <li><strong>Computer Vision</strong></li>
+            <li><strong>Natural Language Processing</strong></li>
+        </ol>
+        
+    <p>
+        In Computer Vision, we have scanned the document, identified the location of text and finally extracted text from the image. 
+        Then in Natural language processing, we have extracted the entitles from the text and did necessary text cleaning and parse the entities form the text.
+    </p> 
+        
+    <p><strong>Python Libraries used in Computer Vision.</strong></p> 
+    <ul>
+        <li>OpenCV</li>
+        <li>Numpy</li>
+        <li>Pytesseract</li>
+    </ul>
+    <p><strong>Python Libraries used in Natural Language Processing</strong></p>
+    <ul>
+        <li>SpaCy</li>
+        <li>Pandas</li>
+        <li>Regular Expression</li>
+        <li>String</li>
+    </ul>
+    <p>
+        For combining two major technologies to develop the project, we have divided architecture of this project into several stages of development.
+    </p>
+        
+    <p>
+        <strong>Stage - 1 : Firstly, we have setup the project by doing the necessary installations and requirements.</strong>
+        <ul>
+            <li>Installed Python</li>
+            <li>Installed Dependencies</li>
+        </ul>
+
+    </p>
+    <p>
+        <strong>Stage - 2 : Secondly, we did all the data preparation. That is we have extracted the text from images using Pytesseract and also did necessary cleaning.</strong>
+        <ul>
+            <li>Gathered Images</li>
+            <li>Extracted Text from all Image</li>
+            <li>Cleaned and Prepared text</li>
+        </ul>
+    </p>
+    <p>
+       <strong>Stage - 3 : Thirdly, we have labelled the NER data using BIO tagging.</strong> 
+        <ul>
+            <li>We have done labelling manually with BIO technique.
+                <ul>
+                    <li>B - Beginning</li>
+                    <li>I  -  Inside</li>
+                    <li>O - Outside</li>
+                </ul>
+            </li>
+        </ul>
+    </p>
+        
+    <p>
+        <strong>Stage - 4 : Fourthly, we have further cleaned the text and preprocessed the data ( conversion from pickle format to spacy format ) for to train machine learning.</strong>
+        <ul>
+            <li>Prepared Training Data for Spacy</li>
+            <li>Converted data into spacy format</li>
+        </ul>
+    </p>
+
+    <p>
+        <strong>Stage - 5 : Fifthly, after preprocessing the data we have trained the Named Entity Recognition model.</strong>
+        <ul>
+            <li>Configured NER Model</li>
+            <li>Trained the model</li>
+        </ul>
+    </p>
+        
+    <p>
+        <strong>Stage - 6 : Finally, we have predicted the entitles using NER and model and created data pipeline for parsing text.</strong>
+        <ul>
+            <li>Loaded Model</li>
+            <li>Rendered and Serve with Displacy</li>
+            <li>Drew Bounding Box on Image</li>
+            <li>Parsed Entitles from Text</li>
+        </ul>
+    </p>
+        
+    <h4>Finally, we have put all together and developed the <strong>Document Scanner App</strong></h4>
+
+{% endblock  %}
+
+</body>
+
+    
