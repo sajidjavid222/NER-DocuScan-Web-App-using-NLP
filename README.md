@@ -23,29 +23,32 @@ Stage - 1 : Firstly, we have setup the project by doing the necessary installati
 
 Installed Python
 Installed Dependencies
+
 Stage - 2 : Secondly, we did all the data preparation. That is we have extracted the text from images using Pytesseract and also did necessary cleaning.
 
 Gathered Images
 Extracted Text from all Image
 Cleaned and Prepared text
+
 Stage - 3 : Thirdly, we have labelled the NER data using BIO tagging.
 
 We have done labelling manually with BIO technique.
 B - Beginning
 I - Inside
 O - Outside
-Stage - 4 : Fourthly, we have further cleaned the text and preprocessed the data ( conversion from pickle format to spacy format ) for to train machine learning.
 
+Stage - 4 : Fourthly, we have further cleaned the text and preprocessed the data ( conversion from pickle format to spacy format ) for to train machine learning.
 Prepared Training Data for Spacy
 Converted data into spacy format
-Stage - 5 : Fifthly, after preprocessing the data we have trained the Named Entity Recognition model.
 
+Stage - 5 : Fifthly, after preprocessing the data we have trained the Named Entity Recognition model.
 Configured NER Model
 Trained the model
-Stage - 6 : Finally, we have predicted the entitles using NER and model and created data pipeline for parsing text.
 
+Stage - 6 : Finally, we have predicted the entitles using NER and model and created data pipeline for parsing text.
 Loaded Model
 Rendered and Serve with Displacy
 Drew Bounding Box on Image
 Parsed Entitles from Text
+
 Finally, we have put all together and developed the Document Scanner App
